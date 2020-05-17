@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_CoolCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100x22/4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXL-8R-v1l">
+                                <rect key="frame" x="20" y="129" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="rCO-XO-5is"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1024" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip6-KQ-IzT" customClass="ResultUILabel" customModule="app_CoolCalc" customModuleProvider="target">
+                                <rect key="frame" x="20" y="234" width="374" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="NPn-r2-32w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="76R-AF-ORC" userLabel="Stack View Main">
+                                <rect key="frame" x="20" y="432" width="326" height="380"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" id="Grf-0b-2ut" userLabel="Stack View Row 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MV7-WK-nkc" customClass="OperatorUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="BZb-Dx-XmX"/>
+                                                    <constraint firstAttribute="height" constant="80" id="dDc-Rj-Vbl"/>
+                                                    <constraint firstAttribute="height" constant="60" id="ead-xg-NgD"/>
+                                                    <constraint firstAttribute="width" constant="80" id="ihO-aq-OMX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="dDc-Rj-Vbl"/>
+                                                        <exclude reference="ihO-aq-OMX"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="BZb-Dx-XmX"/>
+                                                        <include reference="dDc-Rj-Vbl"/>
+                                                        <exclude reference="ead-xg-NgD"/>
+                                                        <include reference="ihO-aq-OMX"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="operatorBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gtd-Zw-h7N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X03-vC-QVV">
+                                                <rect key="frame" x="86.666666666666686" y="0.0" width="66.333333333333314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-a1-bkD" customClass="OperatorUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="173" y="0.0" width="66.666666666666686" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="％">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nL9-GJ-4CN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-fp-9oz" customClass="OperatorUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="259.66666666666669" y="0.0" width="66.333333333333314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="÷">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Qs-Ti-7bP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="S5F-qg-ADL"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" id="UWH-Al-vRG" userLabel="Stack View Row 2">
+                                        <rect key="frame" x="0.0" y="80" width="326" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gD4-rO-t3a" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OaB-qO-3nF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B45-1K-VHP" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="86.666666666666686" y="0.0" width="66.333333333333314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKb-tC-zar"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNk-z7-cmv" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="173" y="0.0" width="66.666666666666686" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f41-Xt-DIY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2H-rF-Tnd" customClass="OperatorUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="259.66666666666669" y="0.0" width="66.333333333333314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SjR-Dm-RzO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="UGs-sg-g43"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fIL-mM-C6W" userLabel="Stack View Row 3">
+                                        <rect key="frame" x="0.0" y="160" width="326" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbP-hE-ucQ" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6hB-FY-z0c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1f-3C-Yns" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="86.666666666666686" y="0.0" width="66.333333333333314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYr-BW-o1Z"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAA-ut-4Rj" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="173" y="0.0" width="66.666666666666686" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0eh-Mv-rHu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGF-Qa-gZY" customClass="OperatorUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="259.66666666666669" y="0.0" width="66.333333333333314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="−">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pNs-py-aHI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" id="FmO-Xg-LQs">
+                                        <rect key="frame" x="0.0" y="240" width="326" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5S-cK-Cv2" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLA-Uz-tWX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U65-kd-d58" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="86.666666666666686" y="0.0" width="66.333333333333314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2lp-AL-fjS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sx-4X-bd5" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="173" y="0.0" width="66.666666666666686" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2X-qX-fDs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoJ-de-uyT" customClass="OperatorUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="259.66666666666669" y="0.0" width="66.333333333333314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="＋">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KPX-9l-g3R"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="TGH-H7-aPs"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" id="jou-xl-hI3" userLabel="Stack View Row 4">
+                                        <rect key="frame" x="0.0" y="320" width="326" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2i-K7-skF">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt9-z1-iyW" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="86.666666666666686" y="0.0" width="66.333333333333314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="clh-75-oUV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbi-Yn-aXS" customClass="NumberUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="173" y="0.0" width="66.666666666666686" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="00">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VyI-un-RFV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLb-zy-AzZ" customClass="EqualsUIButton" customModule="app_CoolCalc" customModuleProvider="target">
+                                                <rect key="frame" x="259.66666666666669" y="0.0" width="66.333333333333314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="38"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSJ-Og-cNJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="Dpg-9K-WnL"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="76R-AF-ORC" secondAttribute="trailing" constant="20" identifier="delete" id="2iW-41-soZ"/>
+                            <constraint firstItem="76R-AF-ORC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="20" id="3y7-6C-XvR"/>
+                            <constraint firstItem="Ip6-KQ-IzT" firstAttribute="width" secondItem="VXL-8R-v1l" secondAttribute="width" id="6cf-Dy-lv6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="76R-AF-ORC" secondAttribute="bottom" constant="50" id="7KS-TX-dLr"/>
+                            <constraint firstItem="VXL-8R-v1l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BBe-og-V61"/>
+                            <constraint firstItem="76R-AF-ORC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BeN-Yn-grC"/>
+                            <constraint firstItem="VXL-8R-v1l" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="Bru-Wh-Cx5"/>
+                            <constraint firstItem="76R-AF-ORC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DYn-yb-n9D"/>
+                            <constraint firstAttribute="trailing" secondItem="VXL-8R-v1l" secondAttribute="trailing" constant="20" id="IYi-lz-QiW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="76R-AF-ORC" secondAttribute="trailing" constant="20" id="KF9-5Q-cDy"/>
+                            <constraint firstItem="76R-AF-ORC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="LSr-uz-pDq"/>
+                            <constraint firstItem="76R-AF-ORC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="N2y-Nw-6sU"/>
+                            <constraint firstItem="76R-AF-ORC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NBJ-vP-Czu"/>
+                            <constraint firstItem="76R-AF-ORC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="20" id="Skd-zr-Voc"/>
+                            <constraint firstAttribute="trailing" secondItem="VXL-8R-v1l" secondAttribute="trailing" constant="20" id="U5G-z0-moW"/>
+                            <constraint firstItem="Ip6-KQ-IzT" firstAttribute="centerX" secondItem="VXL-8R-v1l" secondAttribute="centerX" id="X1B-GT-7Jp"/>
+                            <constraint firstItem="Ip6-KQ-IzT" firstAttribute="top" secondItem="VXL-8R-v1l" secondAttribute="bottom" constant="50" id="XdW-Ix-5RJ"/>
+                            <constraint firstItem="VXL-8R-v1l" firstAttribute="leading" secondItem="76R-AF-ORC" secondAttribute="trailing" constant="10" id="d2l-wV-ZKg"/>
+                            <constraint firstItem="VXL-8R-v1l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ebk-Ei-7GL"/>
+                            <constraint firstAttribute="trailing" secondItem="76R-AF-ORC" secondAttribute="trailing" constant="20" id="jXU-lR-IwJ"/>
+                            <constraint firstItem="76R-AF-ORC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="lqs-qP-3Mu"/>
+                            <constraint firstAttribute="trailing" secondItem="VXL-8R-v1l" secondAttribute="trailing" constant="45" id="lrX-MN-H14"/>
+                            <constraint firstItem="76R-AF-ORC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="mXq-Xm-fcm"/>
+                            <constraint firstItem="76R-AF-ORC" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="osy-gj-0gm"/>
+                            <constraint firstItem="VXL-8R-v1l" firstAttribute="trailing" secondItem="76R-AF-ORC" secondAttribute="trailing" constant="40" id="v4w-3M-zbu"/>
+                            <constraint firstItem="VXL-8R-v1l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="wLJ-gP-LR0"/>
+                            <constraint firstItem="VXL-8R-v1l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="y7o-FU-w7L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KF9-5Q-cDy"/>
+                                <exclude reference="BBe-og-V61"/>
+                                <exclude reference="Bru-Wh-Cx5"/>
+                                <exclude reference="U5G-z0-moW"/>
+                                <exclude reference="d2l-wV-ZKg"/>
+                                <exclude reference="lrX-MN-H14"/>
+                                <exclude reference="v4w-3M-zbu"/>
+                                <exclude reference="wLJ-gP-LR0"/>
+                                <exclude reference="3y7-6C-XvR"/>
+                                <exclude reference="BeN-Yn-grC"/>
+                                <exclude reference="DYn-yb-n9D"/>
+                                <exclude reference="LSr-uz-pDq"/>
+                                <exclude reference="N2y-Nw-6sU"/>
+                                <exclude reference="NBJ-vP-Czu"/>
+                                <exclude reference="Skd-zr-Voc"/>
+                                <exclude reference="jXU-lR-IwJ"/>
+                                <exclude reference="lqs-qP-3Mu"/>
+                                <exclude reference="osy-gj-0gm"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="7KS-TX-dLr"/>
+                                <exclude reference="KF9-5Q-cDy"/>
+                                <exclude reference="IYi-lz-QiW"/>
+                                <include reference="d2l-wV-ZKg"/>
+                                <exclude reference="ebk-Ei-7GL"/>
+                                <include reference="lrX-MN-H14"/>
+                                <exclude reference="wLJ-gP-LR0"/>
+                                <exclude reference="2iW-41-soZ"/>
+                                <exclude reference="LSr-uz-pDq"/>
+                                <include reference="N2y-Nw-6sU"/>
+                                <include reference="NBJ-vP-Czu"/>
+                                <exclude reference="Skd-zr-Voc"/>
+                                <exclude reference="jXU-lR-IwJ"/>
+                                <exclude reference="mXq-Xm-fcm"/>
+                                <include reference="osy-gj-0gm"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="BBe-og-V61"/>
+                                <include reference="Bru-Wh-Cx5"/>
+                                <exclude reference="IYi-lz-QiW"/>
+                                <exclude reference="ebk-Ei-7GL"/>
+                                <include reference="v4w-3M-zbu"/>
+                                <exclude reference="y7o-FU-w7L"/>
+                                <exclude reference="2iW-41-soZ"/>
+                                <include reference="DYn-yb-n9D"/>
+                                <exclude reference="LSr-uz-pDq"/>
+                                <exclude reference="Skd-zr-Voc"/>
+                                <exclude reference="jXU-lR-IwJ"/>
+                                <exclude reference="mXq-Xm-fcm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="calculationLbl" destination="VXL-8R-v1l" id="WRN-al-Py5"/>
+                        <outlet property="resultLbl" destination="Ip6-KQ-IzT" id="tFW-iq-Gll"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
